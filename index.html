@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StanTag</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo-section">
+      <img class="logo2" src="images/logo.png" alt="Logo">
+      <h1 class="logo"> StanTag 🧑‍💻</h1>
+    </div>
+    <button id="toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="nav">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>If you had one shot <br> to build your perfect website... <br> would you take it? 🎤</h2>
+      <p>I design and build beautiful web experiences.</p> <br>
+      <button class="cta-btn">Explore</button>
+    </div>
+  </section>
+
+<section class="about" id="about">
+  <div class="about-content">
+    <h2>About Me</h2>
+    <p>Greetings! My name is Ahmad Zidan, 23 years old, I'm a passionate frontend developer who loves bringing ideas to life on the web. I'm currently focused on creating clean, responsive, and interactive user interfaces using HTML, CSS, and JavaScript. Whether it's a simple landing page or a dynamic web app, I enjoy turning concepts into real, usable digital experiences. I'm always learning and excited to take on new challenges in web development.</p>
+  </div>
+</section>
+
+    <section class="projects">
+      <h2>My Projects</h2>
+      <div id="projects-list"></div>
+    </section>
+
+  <section class="contact"> 
+    <h2>Contact</h2> <br>
+    <form action="https://formspree.io/f/xyzjeylb" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Tell me about your project, idea, or question..." rows="6" required locked></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 StanTag. All rights reserved.</p>
+    <img src="images/footerImage.png">
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

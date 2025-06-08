@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo section - group image and text together */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo2 {
+  height: 40px; /* Set a fixed height */
+  width: auto;  /* Keep aspect ratio */
+}
+
+.logo {
+  font-size: 24px;
+  margin: 0; /* Remove all margins */
+  line-height: 1;
+}
+nav {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px; /* changed margin-right to margin-left for consistency */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #00bfff;
+}
+
+#toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 20px;
+}
+
+.hero {
+  background: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(27, 32, 38, 0.6)),
+    url('images/bgImage.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.cta-btn {
+  background-color: #ffffff;
+  color: #0072ff;
+  border: 2px solid #0072ff;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.1);
+}
+
+.cta-btn:hover {
+  background-color: #0072ff;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 114, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.about {
+  padding: 60px 20px;
+  position: relative;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-image: url('images/bgImage.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05; /* Very subtle background */
+  z-index: -1;
+}
+
+/* Fix the heading position */
+.about h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: #181818;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  /* These are the important fixes: */
+  display: block;
+  width: 100%;
+  float: none;
+  clear: both;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  float: none;
+  clear: both;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-item {
+  margin-bottom: 20px;
+  background-color: rgba(241, 241, 241, 0.5); 
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.projects {
+  padding: 60px 0;
+  background-color: rgba(241, 241, 241, 0.5); ;
+}
+
+.projects h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: #181818;
+  text-align: center;
+}
+
+#projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #181818;
+  text-align: center;
+}
+.contact p {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-top: 3px solid #15171a;
+}
+
+form input,
+form textarea {
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #15171a;
+  box-shadow: 0 0 0 3px rgba(19, 24, 30, 0.1);
+  resize: none;
+}
+
+form button {
+  background: linear-gradient(135deg, #0f1317, #15171a);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.3);
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 0 0 0 8px;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  #toggle {
+    display: inline-block;
+  }
+
+  nav {
+    float: none;
+    margin: 0;
+  }
+    form {
+    margin: 15px;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  form input,
+  form textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px;
+    resize: none;
+  }
+  
+  form button {
+    padding: 14px;
+  }
+    .projects {
+      padding: 40px 0;
+    }
+    
+    .projects h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    #projects-list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+}
