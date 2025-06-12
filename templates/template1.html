@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StanTag - Menu Template </title>
+    <meta name="description" content="StanTag  - أفضل كافيه ومقهى شعبي في المنطقة. نقدم أجود أنواع القهوة والشاي والشيشة">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<style>
+    /* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-red: #dc2626;
+    --dark-red: #b91c1c;
+    --light-red: #fecaca;
+    --pink-bg: #f8b4b4;
+    --white: #ffffff;
+    --off-white: #fafafa;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-600: #4b5563;
+    --gray-800: #1f2937;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--gray-800);
+    direction: rtl;
+    background-color: var(--off-white);
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    text-decoration: none;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-red);
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--gray-800);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--primary-red);
+    background-color: var(--light-red);
+}
+
+/* Hero Section - Split Layout */
+.hero {
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-left {
+    flex: 1;
+    background: var(--pink-bg);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem;
+}
+
+.hero-content {
+    max-width: 500px;
+    text-align: right;
+    padding-left: 2rem;
+}
+
+.hero-right {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--white);
+    color: var(--primary-red);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .hero-left {
+        order: 2;
+        justify-content: center;
+        padding: 2rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .hero-right {
+        order: 1;
+        height: 300px;
+    }
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Menu Navigation */
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.menu-nav-btn {
+    background: var(--white);
+    border: 2px solid var(--primary-red);
+    color: var(--primary-red);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.menu-nav-btn:hover,
+.menu-nav-btn:focus,
+.menu-nav-btn.active {
+    background: var(--primary-red);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Menu Sections */
+.menu-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.menu-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-red);
+    border-radius: 2px;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-right: 4px solid var(--primary-red);
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.item-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--gray-800);
+    flex: 1;
+}
+
+.item-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-right: 1rem;
+}
+
+.price-currency {
+    font-size: 1rem;
+    color: var(--gray-600);
+}
+
+.item-description {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.item-image {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+/*     ABOUT    */ 
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: var(--primary-red);
+  margin-bottom: 2rem;
+}
+
+.about-slide-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: var(--shadow-lg);
+}
+
+.swiper {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  padding-bottom: 2rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-red);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-red);
+}
+
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-red);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.info-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-section p {
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: var(--shadow);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+    }
+
+    nav li {
+        border-bottom: 1px solid var(--gray-200);
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .hero-left {
+        order: 1;
+        padding: 2rem 1rem;
+    }
+
+    .hero-right {
+        order: 2;
+        min-height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .menu-nav {
+        gap: 0.5rem;
+    }
+
+    .menu-nav-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+    .about-image {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 1rem;
+    }
+
+    .hero-left {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .menu-item {
+        padding: 1rem;
+    }
+
+    .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+        .about-image {
+        width: 80%;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+/* Focus Styles for Accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid var(--primary-red);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-red: #cc0000;
+        --gray-800: #000000;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="Business name - الصفحة الرئيسية">Business name</a>
+            <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+            <nav role="navigation" aria-label="القائمة الرئيسية">
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#menu">القائمة</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" role="banner">
+        <div class="hero-left">
+            <div class="hero-content">
+                <h1>مرحباً بكم في Business name</h1>
+                <p>أفضل كافيه ومقهى شعبي في المنطقة - نقدم أجود أنواع القهوة والشاي والشيشة</p>
+                <a href="#menu" class="cta-button">اطلع على القائمة</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="imagesTemplate1/topImage.jpg" alt="" class="hero-image">
+        </div>
+    </section>
+
+    <!-- Main Section -->
+    <main id="main-content">
+        <section id="menu" aria-labelledby="menu-title">
+            <h2 id="menu-title" class="section-title">قائمة الطعام والمشروبات</h2>
+            
+            <div class="menu-nav" role="tablist" aria-label="أقسام القائمة">
+                <button class="menu-nav-btn active" role="tab" aria-selected="true" aria-controls="hot-drinks" onclick="showMenuSection('hot-drinks', this)">
+                    المشروبات الساخنة
+                </button>
+                <button class="menu-nav-btn" role="tab" aria-selected="false" aria-controls="cold-drinks" onclick="showMenuSection('cold-drinks', this)">
+                    المشروبات الباردة
+                </button>
+                <button class="menu-nav-btn" role="tab" aria-selected="false" aria-controls="shisha" onclick="showMenuSection('shisha', this)">
+                    أنواع الشيشة
+                </button>
+                <button class="menu-nav-btn" role="tab" aria-selected="false" aria-controls="milkshakes" onclick="showMenuSection('milkshakes', this)">
+                    الميلك شيك
+                </button>
+            </div>
+
+
+
+            <!-- Hot Drinks Section -->
+            <div id="hot-drinks" class="menu-section active" role="tabpanel" aria-labelledby="hot-drinks-title">
+                <h3 id="hot-drinks-title" class="section-title">المشروبات الساخنة</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">قهوة عربية</h4>
+                            <span class="item-price">15 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">قهوة عربية أصيلة محضرة بالطريقة التقليدية مع الهيل والزعفران</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">شاي أحمر</h4>
+                            <span class="item-price">8 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">شاي أحمر فاخر مع السكر والنعناع الطازج</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">شاي أخضر</h4>
+                            <span class="item-price">10 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">شاي أخضر طبيعي مفيد للصحة مع الياسمين</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">كابتشينو</h4>
+                            <span class="item-price">18 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">قهوة إيطالية مع الحليب المرغي والقرفة</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">لاتيه</h4>
+                            <span class="item-price">20 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">قهوة مع الحليب الساخن وطبقة من الرغوة الكريمية</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">هوت شوكليت</h4>
+                            <span class="item-price">16 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">شوكولاتة ساخنة كريمية مع المارشميلو والكريمة</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cold Drinks Section -->
+            <div id="cold-drinks" class="menu-section" role="tabpanel" aria-labelledby="cold-drinks-title">
+                <h3 id="cold-drinks-title" class="section-title">المشروبات الباردة</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">عصير برتقال طازج</h4>
+                            <span class="item-price">12 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">عصير برتقال طبيعي 100% بدون إضافات أو مواد حافظة</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">عصير مانجو</h4>
+                            <span class="item-price">15 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">عصير مانجو طازج مع قطع الفاكهة الطبيعية</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">ليموناضة</h4>
+                            <span class="item-price">10 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">ليمون طازج مع النعناع والثلج المجروش</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">آيس كوفي</h4>
+                            <span class="item-price">18 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">قهوة باردة مع الثلج والحليب البارد</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">موهيتو</h4>
+                            <span class="item-price">14 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">مشروب منعش بالنعناع والليمون والصودا</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">عصير فراولة</h4>
+                            <span class="item-price">13 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">عصير فراولة طبيعي مع قطع الفاكهة الطازجة</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shisha Section -->
+            <div id="shisha" class="menu-section" role="tabpanel" aria-labelledby="shisha-title">
+                <h3 id="shisha-title" class="section-title">أنواع الشيشة</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">شيشة تفاح</h4>
+                            <span class="item-price">35 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">نكهة التفاح الطبيعية الكلاسيكية المحبوبة</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">شيشة عنب</h4>
+                            <span class="item-price">35 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">نكهة العنب الحلوة والمنعشة</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">شيشة نعناع</h4>
+                            <span class="item-price">30 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">نكهة النعناع المنعشة والباردة</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">شيشة فراولة</h4>
+                            <span class="item-price">38 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">نكهة الفراولة الحلوة والطبيعية</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">شيشة مكس فواكه</h4>
+                            <span class="item-price">40 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">خليط من نكهات الفواكه الاستوائية المتنوعة</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">شيشة كولا</h4>
+                            <span class="item-price">32 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">نكهة الكولا المميزة والمنعشة</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milkshakes Section -->
+            <div id="milkshakes" class="menu-section" role="tabpanel" aria-labelledby="milkshakes-title">
+                <h3 id="milkshakes-title" class="section-title">الميلك شيك</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">ميلك شيك فانيليا</h4>
+                            <span class="item-price">22 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">ميلك شيك كريمي بنكهة الفانيليا الطبيعية</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">ميلك شيك شوكولاتة</h4>
+                            <span class="item-price">25 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">ميلك شيك غني بالشوكولاتة الفاخرة البلجيكية</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">ميلك شيك فراولة</h4>
+                            <span class="item-price">24 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">ميلك شيك بالفراولة الطازجة والكريمة</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">ميلك شيك موز</h4>
+                            <span class="item-price">23 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">ميلك شيك طبيعي بالموز الطازج والعسل</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">ميلك شيك أوريو</h4>
+                            <span class="item-price">28 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">ميلك شيك مع قطع بسكويت الأوريو المقرمشة</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="imagesTemplate1/itemImage.png" alt="وصف العنصر" class="item-image">
+                        <div class="item-header">
+                            <h4 class="item-name">ميلك شيك كراميل</h4>
+                            <span class="item-price">26 <span class="price-currency">شيكل</span></span>
+                        </div>
+                        <p class="item-description">ميلك شيك بصوص الكراميل الذهبي والكريمة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+<section class="about" id="about">
+  <h2>Business name</h2>
+  <!-- Swiper -->
+  <div class="swiper about-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="imagesTemplate1/about1.jpg" alt="صورة 1" class="about-slide-img" /></div>
+      <div class="swiper-slide"><img src="imagesTemplate1/about2.jpeg" alt="صورة 2" class="about-slide-img" /></div>
+      <div class="swiper-slide"><img src="imagesTemplate1/about3.jpg" alt="صورة 3" class="about-slide-img" /></div>
+      <div class="swiper-slide"><img src="imagesTemplate1/about4.jpg" alt="صورة 4" class="about-slide-img" /></div>
+      <div class="swiper-slide"><img src="imagesTemplate1/about5.jpg" alt="صورة 5" class="about-slide-img" /></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <p>
+    نحن في "Business name" نقدم تجربة فريدة لعشاق القهوة والمشروبات الطازجة. نسعى دائماً لتقديم أفضل النكهات باستخدام مكونات طبيعية وجودة عالية في جو مريح وودّي يناسب جميع الأذواق. زورونا لتكتشفوا متعة الطعم الحقيقي!
+  </p>
+</section>
+
+
+
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h2 class="footer-title">Business name</h2>
+            <p>كافيه ومقهى شعبي - تجربة لا تُنسى</p>
+            <div class="footer-info">
+                <div class="info-section">
+                    <h3>معلومات التواصل</h3>
+                    <p>الهاتف: 0501234567</p>
+                    <p>البريد الإلكتروني: usinessName@gmail.com</p>
+                </div>
+                <div class="info-section">
+                    <h3>العنوان</h3>
+                    <p>businessAddress</p>
+                    <p>businessAddress</p>
+                </div>
+                <div class="info-section">
+                    <h3>ساعات العمل</h3>
+                    <p>السبت - الخميس: 8:00 ص - 12:00 م</p>
+                    <p>الجمعة: 2:00 م - 12:00 م</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    // Mobile Navigation Toggle
+function toggleNav() {
+    const nav = document.querySelector('nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    const isOpen = nav.classList.contains('active');
+    
+    nav.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', !isOpen);
+    navToggle.innerHTML = isOpen ? '☰' : '✕';
+}
+
+// Menu Section Navigation
+function showMenuSection(sectionId, button) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.menu-section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.menu-nav-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+    });
+
+    // Show selected section
+    document.getElementById(sectionId).classList.add('active');
+    
+    // Add active class to clicked button
+    button.classList.add('active');
+    button.setAttribute('aria-selected', 'true');
+
+    // Announce section change for screen readers
+    announceToScreenReader(`تم عرض قسم ${document.querySelector(`#${sectionId} .section-title`).textContent}`);
+}
+
+// Screen Reader Announcements
+function announceToScreenReader(message) {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.style.position = 'absolute';
+    announcement.style.left = '-10000px';
+    announcement.style.width = '1px';
+    announcement.style.height = '1px';
+    announcement.style.overflow = 'hidden';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+        document.body.removeChild(announcement);
+    }, 1000);
+}
+
+// Smooth Scrolling for Internal Links
+function smoothScroll(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = element.offsetTop - headerHeight - 20;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Header Scroll Effect
+function handleScroll() {
+    const header = document.querySelector('header');
+    const scrolled = window.scrollY > 50;
+    
+    if (scrolled) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+    } else {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+    }
+}
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    navToggle.addEventListener('click', toggleNav);
+
+    // Close mobile nav when clicking on links
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const nav = document.querySelector('nav');
+            if (nav.classList.contains('active')) {
+                toggleNav();
+            }
+        });
+    });
+
+    // Smooth scrolling for CTA button and nav links
+    const ctaButton = document.querySelector('.cta-button');
+    ctaButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        smoothScroll('#menu');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                smoothScroll(href);
+            }
+        });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', handleScroll);
+
+    // Keyboard navigation for menu tabs
+    const menuButtons = document.querySelectorAll('.menu-nav-btn');
+    menuButtons.forEach((button, index) => {
+        button.addEventListener('keydown', function(e) {
+            let targetIndex;
+            
+            switch(e.key) {
+                case 'ArrowRight':
+                    targetIndex = index > 0 ? index - 1 : menuButtons.length - 1;
+                    break;
+                case 'ArrowLeft':
+                    targetIndex = index < menuButtons.length - 1 ? index + 1 : 0;
+                    break;
+                case 'Home':
+                    targetIndex = 0;
+                    break;
+                case 'End':
+                    targetIndex = menuButtons.length - 1;
+                    break;
+                default:
+                    return;
+            }
+            
+            e.preventDefault();
+            menuButtons[targetIndex].focus();
+            menuButtons[targetIndex].click();
+        });
+    });
+
+    // Add loading animation to menu items
+    const menuItems = document.querySelectorAll('.menu-item');
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    menuItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(item);
+    });
+});
+
+// Close mobile nav when clicking outside
+document.addEventListener('click', function(e) {
+    const nav = document.querySelector('nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    
+    if (nav.classList.contains('active') && 
+        !nav.contains(e.target) && 
+        !navToggle.contains(e.target)) {
+        toggleNav();
+    }
+});
+
+// Handle escape key to close mobile nav
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const nav = document.querySelector('nav');
+        if (nav.classList.contains('active')) {
+            toggleNav();
+        }
+    }
+});
+    //swiper for about images
+  const swiper = new Swiper('.about-swiper', {
+    loop: true,
+    spaceBetween: 20,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+</html>
